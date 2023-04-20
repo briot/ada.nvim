@@ -28,21 +28,21 @@ let current_compiler = "gnat"
 if !exists("g:gnat")
    let g:gnat = gnat#New ()
 
-   call ada#Map_Menu (
-      \ 'Pretty Print',
-      \ ':GnatPretty',
-      \ 'call gnat.Pretty',
-      \ '')
-   call ada#Map_Menu (
-      \ 'Set Project file\.\.\.',
-      \ ':SetProject',
-      \ 'call gnat.Set_Project_File',
-      \ '')
-   call ada#Map_Menu (
-      \ 'Set Project options\.\.\.',
-      \ ':SetOptions',
-      \ 'call gnat.Set_Options',
-      \ '')
+"   call ada#Map_Menu (
+"      \ 'Pretty Print',
+"      \ ':GnatPretty',
+"      \ 'call gnat.Pretty',
+"      \ '')
+"   call ada#Map_Menu (
+"      \ 'Set Project file\.\.\.',
+"      \ ':SetProject',
+"      \ 'call gnat.Set_Project_File',
+"      \ '')
+"   call ada#Map_Menu (
+"      \ 'Set Project options\.\.\.',
+"      \ ':SetOptions',
+"      \ 'call gnat.Set_Options',
+"      \ '')
 
    call g:gnat.Set_Session ()
 endif

@@ -32,7 +32,7 @@ if exists ("b:did_ftplugin") || version < 700
 endif
 
 " Don't load another plugin for this buffer
-let b:did_ftplugin = 45
+let b:did_ftplugin_ada = 46
 
 "
 " Temporarily set cpoptions to ensure the script loads OK
@@ -126,31 +126,31 @@ endif
 
 " Section: Abbrev {{{1
 "
-if exists("g:ada_abbrev")
-   iabbrev ret	return
-   iabbrev proc procedure
-   iabbrev pack package
-   iabbrev func function
-endif
+" if exists("g:ada_abbrev")
+"    iabbrev ret	return
+"    iabbrev proc procedure
+"    iabbrev pack package
+"    iabbrev func function
+" endif
 
 " Section: Commands, Mapping, Menus {{{1
 "
-execute "50amenu &Ada.-sep- :"
-call ada#Map_Menu (
-   \'Toggle Space Errors',
-   \ ':AdaSpaces',
-   \'call ada#Switch_Syntax_Option',
-   \ '''space_errors''')
-call ada#Map_Menu (
-   \'Toggle Lines Errors',
-   \ ':AdaLines',
-   \'call ada#Switch_Syntax_Option',
-   \ '''line_errors''')
-call ada#Map_Menu (
-   \'Toggle Standard Types',
-   \ ':AdaTypes',
-   \'call ada#Switch_Syntax_Option',
-   \'''standard_types''')
+" execute "50amenu &Ada.-sep- :"
+" call ada#Map_Menu (
+"    \'Toggle Space Errors',
+"    \ ':AdaSpaces',
+"    \'call ada#Switch_Syntax_Option',
+"    \ '''space_errors''')
+" call ada#Map_Menu (
+"    \'Toggle Lines Errors',
+"    \ ':AdaLines',
+"    \'call ada#Switch_Syntax_Option',
+"    \ '''line_errors''')
+" call ada#Map_Menu (
+"    \'Toggle Standard Types',
+"    \ ':AdaTypes',
+"    \'call ada#Switch_Syntax_Option',
+"    \'''standard_types''')
 
 " 1}}}
 " Reset cpoptions
